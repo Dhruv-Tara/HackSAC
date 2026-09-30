@@ -84,7 +84,11 @@ export default function Hero() {
         transition={{ duration: 0.6, delay: 0.18, ease: "easeOut" }}
         className="max-w-2xl text-base leading-relaxed text-[#0F1B3D]/80 sm:text-lg"
       >
-        Three rounds. One idea wins. {EVENT.name} is a three-round hackathon for 2nd-year MET&apos;s students. Pitch online, build a prototype, then present your final idea at {EVENT.campus}.
+        Three rounds. One idea wins.{" "}
+        <span className="font-bold text-[#F04444]">
+          {EVENT.name} is a three-round hackathon for 2nd-year MET&apos;s students.
+        </span>{" "}
+        Pitch online, build a prototype, then present your final idea at {EVENT.campus}.
       </motion.p>
       <motion.div
         initial={reduceMotion ? false : { opacity: 0, y: 12 }}
