@@ -8,11 +8,20 @@ export default function RegisterFooter() {
           {EVENT.name}
         </h2>
         <div className="mt-12 flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
-          <div className="max-w-sm text-base text-[#F4F6FB]/80 sm:text-lg">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#F04444] sm:text-sm">Student Coordinators</p>
-            <div className="space-y-2">
-              <p><span className="font-semibold text-[#F4F6FB]">Yash Sharma:</span> 8459721079</p>
-              <p><span className="font-semibold text-[#F4F6FB]">Kunal Sonawane:</span> 7350769717</p>
+          <div className="flex flex-col gap-6 sm:flex-row sm:gap-12 text-base text-[#F4F6FB]/80 sm:text-lg">
+            <div>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#F04444] sm:text-sm">Faculty Coordinator</p>
+              <div className="space-y-2">
+                <p><span className="font-semibold text-[#F4F6FB]">Dr. Anand Gharu:</span> 8087777708</p>
+                <p><span className="font-semibold text-[#F4F6FB]">Mail:</span> <a href="mailto:metsac26@gmail.com" className="transition hover:text-[#F4F6FB] hover:underline">metsac26@gmail.com</a></p>
+              </div>
+            </div>
+            <div>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#F04444] sm:text-sm">Student Coordinators</p>
+              <div className="space-y-2">
+                <p><span className="font-semibold text-[#F4F6FB]">Yash Sharma:</span> 8459721079</p>
+                <p><span className="font-semibold text-[#F4F6FB]">Kunal Sonawane:</span> 7350769717</p>
+              </div>
             </div>
           </div>
           <a
