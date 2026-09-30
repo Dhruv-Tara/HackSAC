@@ -26,9 +26,9 @@ export const ROUNDS = [
   {
     date: "16 Oct",
     day: "Friday",
-    title: "Round 3: Final",
-    mode: "Elimination",
-    body: "Present your finished project to the panel on the 2nd Floor, Computer Department. Winners are announced here.",
+    title: "Round 3: Finale",
+    mode: "Final Showdown",
+    body: "The top 4–5 teams present their finished projects to the panel on the 2nd Floor, Computer Department. One winning team is announced.",
   },
 ];
 

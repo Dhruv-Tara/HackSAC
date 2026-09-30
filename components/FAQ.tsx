@@ -8,6 +8,14 @@ const QUESTIONS: { question: string; answer: string; link?: { href: string; labe
     answer: "HackSAC is open only to 2nd-year MET's students, in teams of four members. The event is not open to students from other years, colleges, or institutions.",
   },
   {
+    question: "What will I receive?",
+    answer: "All registered students will receive a soft copy of a certificate of participation. Winners will receive a certificate of achievement and prize money for each problem statement.",
+  },
+  {
+    question: "Can one team work on all three problem statements?",
+    answer: "Yes. A single team can participate in all three problem statements.",
+  },
+  {
     question: "What are the Round 1 PPT requirements?",
     answer: "Use the official HackSAC presentation template for your idea submission. Get the template from the organizers before submitting; presentations in another format may not be accepted. Keep the deck concise, explain the problem and proposed solution, and include your team details in one final PPT file.",
   },
@@ -43,7 +51,7 @@ export default function FAQ() {
         <div>
           <p className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#F04444] sm:text-sm">
             <span className="h-px w-5 bg-[#F04444]" aria-hidden="true" />
-            09 - Common inquiries
+            Common inquiries
           </p>
           <h2 className="mt-7 font-[family-name:var(--font-display)] text-5xl font-semibold leading-[0.9] tracking-[-0.05em] sm:text-7xl lg:text-8xl">
             <span className="block">Got</span>
