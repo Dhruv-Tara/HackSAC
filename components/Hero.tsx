@@ -1,7 +1,7 @@
 "use client";
 
 import { EVENT } from "@/lib/config";
-import metLogo from "@/lib/image.png";
+import metLogo from "@/lib/MET_ioe_logo.png";
 import sacLogo from "@/lib/SAC Logo.png";
 import { motion, useInView, useReducedMotion, useSpring, useTransform } from "framer-motion";
 import Image from "next/image";
@@ -49,12 +49,12 @@ export default function Hero() {
             src={metLogo}
             alt="MET Institute of Engineering logo"
             priority
-            width={128}
-            height={59}
+            width={154}
+            height={71}
             style={{ height: "auto" }}
-            className="h-auto w-24 shrink-0 object-contain sm:w-32 lg:w-40"
+            className="h-auto w-[115px] shrink-0 object-contain sm:w-[154px] lg:w-48"
           />
-          <span className="h-12 w-[3px] shrink-0 bg-[#F04444] sm:h-18 lg:h-20" aria-hidden="true" />
+          <span className="h-12 w-[3px] shrink-0 bg-[#F04444] sm:h-16 lg:h-18" aria-hidden="true" />
           <Image
             src={sacLogo}
             alt="Student Association of Computer logo"
@@ -63,10 +63,9 @@ export default function Hero() {
             className="size-14 shrink-0 object-contain mix-blend-multiply sm:size-18 lg:size-20"
           />
         </div>
-        <span className="hidden h-14 w-[3px] shrink-0 bg-[#F04444] sm:block sm:h-18 lg:h-20" aria-hidden="true" />
-        <div className="space-y-1 sm:space-y-1.5">
-          <p className="text-sm font-semibold leading-snug text-[#0F1B3D]/85 sm:text-lg lg:text-xl">{EVENT.campus}</p>
-          <p className="text-xs font-medium text-[#0F1B3D]/75 sm:text-base lg:text-lg">Department of Computer Engineering</p>
+        <span className="hidden h-12 w-[3px] shrink-0 bg-[#F04444] sm:block sm:h-16 lg:h-18" aria-hidden="true" />
+        <div className="space-y-0.5 sm:space-y-1">
+          <p className="text-base font-bold leading-snug text-[#0F1B3D] sm:text-xl lg:text-2xl">Department of Computer Engineering</p>
           <p className="text-xs font-medium text-[#0F1B3D]/75 sm:text-base lg:text-lg">{EVENT.org} presents</p>
         </div>
       </motion.div>
