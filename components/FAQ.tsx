@@ -5,7 +5,7 @@ import { useState } from "react";
 const QUESTIONS: { question: string; answer: string; link?: { href: string; label: string } }[] = [
   {
     question: "Who can enter?",
-    answer: "HackSAC is open only to 2nd-year MET's students, in teams of four members. The event is not open to students from other years, colleges, or institutions.",
+    answer: "HackSAC is open only to 2nd-year engineering and 3rd-year polytechnic students at MET, in teams of four members. Every team member must meet one of these eligibility criteria. The event is not open to students from other years, colleges, or institutions.",
   },
   {
     question: "What will I receive?",

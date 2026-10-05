@@ -3,9 +3,12 @@
 import { EVENT } from "@/lib/config";
 import metLogo from "@/lib/MET_ioe_logo.png";
 import sacLogo from "@/lib/SAC Logo.png";
+import NumberFlow from "@number-flow/react";
 import { motion, useInView, useReducedMotion, useSpring, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+
+const FIRST_ROUND_START = new Date("2026-10-09T16:00:00+05:30").getTime();
 
 export default function Hero() {
   const reduceMotion = useReducedMotion();
@@ -16,10 +19,27 @@ export default function Hero() {
   const countLabel = useTransform(count, (value) => String(Math.round(value)).padStart(2, "0"));
   const countRef = useRef<HTMLDivElement>(null);
   const countIsInView = useInView(countRef, { once: true, amount: 0.8 });
+  const [timeLeft, setTimeLeft] = useState<number | null>(null);
 
   useEffect(() => {
     if (countIsInView) count.set(3);
   }, [countIsInView, count]);
+
+  useEffect(() => {
+    const updateCountdown = () => setTimeLeft(Math.max(0, FIRST_ROUND_START - Date.now()));
+
+    updateCountdown();
+    const intervalId = window.setInterval(updateCountdown, 1000);
+    return () => window.clearInterval(intervalId);
+  }, []);
+
+  const totalSeconds = Math.floor((timeLeft ?? 0) / 1000);
+  const countdownUnits = [
+    { label: "Days", value: timeLeft === null ? null : Math.floor(totalSeconds / 86400) },
+    { label: "Hours", value: timeLeft === null ? null : Math.floor((totalSeconds % 86400) / 3600) },
+    { label: "Minutes", value: timeLeft === null ? null : Math.floor((totalSeconds % 3600) / 60) },
+    { label: "Seconds", value: timeLeft === null ? null : totalSeconds % 60 },
+  ];
 
   return (
     <section
@@ -85,7 +105,7 @@ export default function Hero() {
       >
         Three rounds. One idea wins.{" "}
         <span className="font-bold text-[#F04444]">
-          {EVENT.name} is a three-round hackathon for 2nd-year MET&apos;s students.
+          {EVENT.name} is a three-round hackathon for 2nd-year engineering and 3rd-year polytechnic students at MET.
         </span>{" "}
         Pitch online, build a prototype, then present your final idea at {EVENT.campus}.
       </motion.p>
@@ -110,6 +130,32 @@ export default function Hero() {
           {countLabel}
         </motion.span>
         <span className="text-sm uppercase">rounds · 7–16 October</span>
+      </div>
+      <div
+        role="timer"
+        aria-label="Countdown to the first round on Friday, October 9 at 4 PM India Standard Time"
+        className="mt-2 flex flex-wrap items-end gap-x-5 gap-y-3"
+      >
+        <div className="grid gap-2">
+          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#0F1B3D]/60">
+            {timeLeft === 0 ? "The first round has begun" : "First round begins in"}
+          </p>
+          <div className="flex items-baseline gap-3 sm:gap-4">
+            {countdownUnits.map(({ label, value }) => (
+              <div key={label} className="grid justify-items-center gap-0.5">
+                <span className="font-[family-name:var(--font-display)] text-2xl font-semibold tabular-nums text-[#F04444] sm:text-3xl">
+                  {value === null ? "--" : <NumberFlow value={value} />}
+                </span>
+                <span className="text-[10px] font-medium uppercase tracking-[0.08em] text-[#0F1B3D]/55">
+                  {label}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <span className="pb-1 text-xs font-medium uppercase tracking-[0.08em] text-[#0F1B3D]/60">
+          Fri, 9 Oct · 4:00 PM IST
+        </span>
       </div>
     </section>
   );

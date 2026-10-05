@@ -1,7 +1,7 @@
 const RULES = [
   {
     title: "Eligibility",
-    answer: "HackSAC is open only to 2nd-year MET's students. Every team member must meet the eligibility requirements before registration.",
+    answer: "HackSAC is open only to 2nd-year engineering and 3rd-year polytechnic students at MET. Every team member must meet one of these eligibility criteria before registration.",
   },
   {
     title: "Team size & composition",

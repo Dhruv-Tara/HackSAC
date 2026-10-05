@@ -4,18 +4,17 @@ export const EVENT = {
   org: "SAC, Student Association of Computer",
   campus: "MET's Institute of Engineering Nashik",
   formUrl: "https://forms.gle/t1fTfjiLrw8a2Sz79",
-  audience: "2nd-year MET's students only",
+  audience: "2nd-year engineering and 3rd-year polytechnic students at MET only",
   teamSize: "4 members per team",
 };
 
 export const ROUNDS = [
   {
-    date: "7–8 Oct",
-    day: "Wed–Thu",
+    date: "9-10 Oct",
+    day: "Fri-Sat",
     title: "Round 1: Idea presentation",
     mode: "Online",
-    body: "Present your idea online with a PPT. Shortlisted teams move on to the prototype round.",
-  },
+body: "Present your idea online with a PPT. Teams will receive guidance and feedback to help develop their idea for the next round.",  },
   {
     date: "12 Oct",
     day: "Monday",

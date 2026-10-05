@@ -4,7 +4,7 @@ HackSAC is a three-round hackathon hosted by the Student Association of Computer
 
 ## Event Overview
 
-- **Eligibility:** Second-year students at MET only
+- **Eligibility:** 2nd-year engineering and 3rd-year polytechnic students at MET only
 - **Team size:** Four members
 - **Round 1 — Idea presentation:** 7–8 October, online
 - **Round 2 — Prototype display:** 12 October

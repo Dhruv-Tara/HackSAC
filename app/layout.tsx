@@ -10,7 +10,7 @@ const wordmark = Archivo_Black({ subsets: ["latin"], weight: "400", variable: "-
 
 export const metadata: Metadata = {
   title: "HackSAC | Hackathon by SAC",
-  description: "A three-round hackathon for second-year students, by the Student Association of Computer.",
+  description: "A three-round hackathon for 2nd-year engineering and 3rd-year polytechnic students at MET, by the Student Association of Computer.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
