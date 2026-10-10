@@ -10,8 +10,8 @@ export const EVENT = {
 
 export const ROUNDS = [
   {
-    date: "9-10 Oct",
-    day: "Fri-Sat",
+    date: "11 Oct",
+    day: "Sunday",
     title: "Round 1: Idea presentation",
     mode: "Online",
 body: "Present your idea online with a PPT. Teams will receive guidance and feedback to help develop their idea for the next round.",  },
@@ -41,10 +41,5 @@ export const PROBLEM_STATEMENTS = [
     number: "02",
     title: "Making Campus Gatherings Work",
     body: "Colleges host workshops, fests, talks, and competitions, but organizers and participants often find the process chaotic. Build a software system that makes organizing and attending campus events smoother for everyone involved.",
-  },
-  {
-    number: "03",
-    title: "Building Better Routines",
-    body: "Students often know what they should be doing but struggle to stay consistent. Create a software solution that helps a student stay on top of their responsibilities and build lasting habits.",
   },
 ];

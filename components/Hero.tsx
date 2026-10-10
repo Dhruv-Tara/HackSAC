@@ -8,7 +8,7 @@ import { motion, useInView, useReducedMotion, useSpring, useTransform } from "fr
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
-const FIRST_ROUND_START = new Date("2026-10-09T16:00:00+05:30").getTime();
+const FIRST_ROUND_START = new Date("2026-10-12T10:30:00+05:30").getTime();
 
 export default function Hero() {
   const reduceMotion = useReducedMotion();
@@ -129,16 +129,16 @@ export default function Hero() {
         <motion.span className="font-[family-name:var(--font-display)] text-3xl font-semibold tabular-nums text-[#F04444] sm:text-4xl">
           {countLabel}
         </motion.span>
-        <span className="text-sm uppercase">rounds · 7–16 October</span>
+        <span className="text-sm uppercase">rounds · 11–16 October</span>
       </div>
       <div
         role="timer"
-        aria-label="Countdown to the first round on Friday, October 9 at 4 PM India Standard Time"
+        aria-label="Countdown to the second round on Monday, October 12 at 10:30 AM India Standard Time"
         className="mt-2 flex flex-wrap items-end gap-x-5 gap-y-3"
       >
         <div className="grid gap-2">
           <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#0F1B3D]/60">
-            {timeLeft === 0 ? "The first round has begun" : "First round begins in"}
+            {timeLeft === 0 ? "The second round has begun" : "Second round begins in"}
           </p>
           <div className="flex items-baseline gap-3 sm:gap-4">
             {countdownUnits.map(({ label, value }) => (
@@ -154,7 +154,7 @@ export default function Hero() {
           </div>
         </div>
         <span className="pb-1 text-xs font-medium uppercase tracking-[0.08em] text-[#0F1B3D]/60">
-          Fri, 9 Oct · 4:00 PM IST
+          Monday 12 Oct · 10:30 AM IST
         </span>
       </div>
     </section>

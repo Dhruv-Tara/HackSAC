@@ -16,7 +16,8 @@ export default function Problems() {
           </h2>
         </div>
       </div>
-      <ol className="mt-8 grid border-t border-[#0F1B3D]/20 sm:mt-12 sm:grid-cols-3">
+
+      <ol className="mt-8 grid border-t border-[#0F1B3D]/20 sm:mt-12 sm:grid-cols-2">
         {PROBLEM_STATEMENTS.map((problem, index) => (
           <motion.li
             key={problem.number}
@@ -24,11 +25,20 @@ export default function Problems() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 0.45, delay: index * 0.08, ease: "easeOut" }}
-            className="border-b border-[#0F1B3D]/20 py-6 sm:border-b-0 sm:border-r sm:px-5 sm:py-8 sm:first:pl-0 sm:last:border-r-0 sm:last:pr-0 lg:px-8"
+            className={[
+              "border-b border-[#0F1B3D]/20 py-6 sm:border-b-0 sm:py-8 lg:py-9",
+              index === 0 ? "sm:border-r sm:pr-8 lg:pr-12" : "sm:pl-8 lg:pl-12",
+            ].join(" ")}
           >
-            <span className="font-[family-name:var(--font-display)] text-3xl font-semibold text-[#F04444]">{problem.number}</span>
-            <h3 className="mt-4 text-lg font-semibold sm:text-xl">{problem.title}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-[#0F1B3D]/75 sm:text-base">{problem.body}</p>
+            <span className="font-[family-name:var(--font-display)] text-3xl font-semibold text-[#F04444] sm:text-4xl">
+              {problem.number}
+            </span>
+            <h3 className="mt-4 text-xl font-semibold leading-tight text-[#0F1B3D] sm:text-2xl lg:text-[2rem]">
+              {problem.title}
+            </h3>
+            <p className="mt-3 max-w-[52ch] text-base leading-relaxed text-[#0F1B3D]/75 sm:text-lg">
+              {problem.body}
+            </p>
           </motion.li>
         ))}
       </ol>
